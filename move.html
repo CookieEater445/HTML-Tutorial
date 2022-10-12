@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.ord/1999/xhtml"></html>>
+    <head>
+        <title>Lab 6 - Move Elements</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- 
+            Author: Zyad Khan
+            Date: 17 November 2021
+        -->
+    <script type = "text/javascript">
+    
+    function showWelcomeMessage()
+    {
+        window.alert("Welcome to the Live Reveal of the Lucid Air")
+    }
+    function showImage(image)
+    {
+       document.getElementById("ImageAuto").style.visibility = "visible";
+        // window.alert("images/large/" + image + ".jpg")
+       document.getElementById("ImageAuto").src = "images/large/" + image;
+       document.getElementById("divDescription").innerHTML = image;
+       document.getElementById("divDescription").style.textAlign = "center"
+    }
+
+    function hideImage(){
+        document.getElementById("ImageAuto").style.visibility = "hidden"
+        }
+
+    showWelcomeMessage()
+    </script>
+
+    </head>
+    <body>
+        <main>
+            <table>
+            <header class=header>
+                <h1>JavaScript 
+                    <br>
+                    Events - Mouse Move Events
+                </h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="default.html">Home</a></li>
+                    <li class="selected"><a href="move.html">Move</a></li>
+                    <li><a href="click.html">Click</a></li>
+                    <li><a href="drag.html">Drag</a></li>
+                </ul>
+            </nav>
+            <section> 
+                <article class=twoArticles>
+                    <header>Lucid Air Thumbnail</header>
+                        <img src ="images/small/lucid1.jpg" class="img50" onmouseover="showImage('lucid1.jpg');" onmouseout="hideImage();" />
+                        <img src ="images/small/lucid2.jpg" class="img50" onmouseover="showImage('lucid2.jpg');" onmouseout="hideImage();" />
+                        <br>
+                        <img src ="images/small/lucid3.jpg" class="img50" onmouseover="showImage('lucid3.jpg');" onmouseout="hideImage();" />
+                        <img src ="images/small/lucid4.jpg" class="img50" onmouseover="showImage('lucid4.jpg');" onmouseout="hideImage();" />
+
+                </article> 
+                <article class="twoArticles">
+                    <header class="header">Lucid Air Images</header>
+                        <img src="" id="ImageAuto" class="image100" />
+                        <div id="divDescription" ></div>
+                </article>
+            </section>
+            <footer>
+                Zyad Khan
+            </footer>
+            </table>
+        </main>
+    </body>
+</html>

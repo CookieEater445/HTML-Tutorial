@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.ord/1999/xhtml"></html>>
+    <head>
+        <title>Javascript Drag Elements</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- 
+            Author: Zyad Khan
+            Date: 17 November 2021
+        -->
+    <script type = "text/javascript">
+
+        function dragStart(event)
+        {
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+        function dragging(event) 
+        {
+            document.getElementById("dragHeader").innerHTML = "The Image is being dragged"
+        }
+            
+        function allowDrop(event) 
+        {
+            event.preventDefault();
+        }
+
+        function drop(event)
+        {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+            document.getElementById("dragHeader").innerHTML = "The image element was dropped";
+        }
+        </script>
+
+    </head>
+    <body>
+        <div id="divWrapper">
+        <main>
+            <header class=header>
+                <h1>Lab 6 - JavaScript 
+                    <br>
+                    Drag Events
+                </h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="default.html">Home</a></li>
+                    <li><a href="move.html">Move</a></li>
+                    <li><a href="click.html">Click</a></li>
+                    <li class="selected"><a href="drag.html">Drag</a></li>
+                </ul>
+            </nav>
+            <section> 
+                <article class=twoArticles ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                    <header class="header">Lucid Air Thumbnail</header>
+                            <img src ="images/small/lucid1.jpg" id="Image1" class="image50" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" />
+                            <img src ="images/small/lucid2.jpg" id="Image2" class="image50" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true"/>
+                            <br />
+                            <img src ="images/small/lucid3.jpg" id="Image3" class="image50" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true"/>
+                            <img src ="images/small/lucid4.jpg" id="Image4" class="image50" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" /> 
+                </article> 
+                <article class="twoArticles" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <header id="dragHeader" class="dragHeader"></header>
+                </article>
+                <br />
+
+            </section>
+
+            <footer>
+                Zyad Khan
+            </footer>
+        </div>
+        </main>
+    </body>
+</html>

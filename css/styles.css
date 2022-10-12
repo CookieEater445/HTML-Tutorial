@@ -1,0 +1,166 @@
+body
+{
+    font-size: 1em;
+    font-family: Calibri,sans-serif;
+    background-color: #c5c6c7;
+}
+
+main
+{
+    width: 88%;
+    min-height: 1000px;
+    margin: auto;
+    border: 1px #000000 solid;
+    background-color: #1f2833;
+    padding: 1%;
+    position:relative;
+    
+}
+
+
+
+header
+{
+    width: 96%;
+    height: 140px;
+    border-bottom: 1px #000000 solid;
+    background-color: #253E66;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border-spacing: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    position:relative;
+    float: left;
+}
+.article80
+{
+    width: 98%;
+    min-height: 600px;
+    background-color: #ffffff;
+    padding-left: 1%;
+    padding-right: 1%;
+    position: relative;
+    float: left;
+    margin-right:-1%;
+    font-size: 20px;
+}
+
+nav
+{
+    width: 80%;
+    height: 40px;
+    padding-left:20%;
+    background-color: #66fcf1;
+    position: relative;
+    float: left;
+    font-family: Calibri,sans-serif;
+    font-size: 18px;
+}
+nav ul
+{
+    width: 80%;
+    list-style:none;
+    margin: 0px;
+}
+
+nav li
+{
+    min-width: 20%;
+    float: left;
+    position:relative;
+    font-size: 1.2em;
+    padding-left: .5%;
+    padding-right: .5%;  
+
+}
+
+nav a
+{
+    display: block;
+    padding: 3px 6px;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    background-color: #45a29e;
+}  
+.selected
+{
+    background-color: #c5c6c7;
+}
+
+footer
+{
+    width: 96%;
+    min-height:100px;
+    max-height: 150px;
+    background-color: #253E66;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: auto;
+    position: left;
+    float: left;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 18px;
+}
+
+.twoArticles  
+{
+    width:47%;
+    min-height:500px;
+    background-color:#ffffff;
+    padding:1%;
+    position:relative;
+    float:left;
+    border:1px solid #000000;
+}
+.twoArticles > header
+{
+    height:30px;
+    margin-bottom:2%;
+    text-align:center;
+    position:relative;
+    float:left;
+    border:1px solid #000000;
+}
+.twoArticles > body
+{
+    height:30px;
+    margin-bottom:2%;
+    padding: 20px;
+    column-span: 2;;
+    float:left;
+    border:1px solid #000000;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+.img50
+{
+    width: 40% ;
+
+
+}
+.img100
+{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dragHeader
+{
+    height:30px;
+    margin-bottom:2%;
+    text-align:center;
+    position:relative;
+    float:left;
+    border:1px solid #000000;
+}

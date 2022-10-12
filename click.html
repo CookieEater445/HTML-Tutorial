@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.ord/1999/xhtml">
+    <head>
+        <title>Lab 6 - Click Elements</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- 
+            Author: Zyad Khan
+            Date: 17 November 2021
+        -->
+    <script type = "text/javascript">
+        function showImage(image){
+            document.getElementById("ImageAuto").style.visibility="visible";
+             // window.alert("images/large/" + image + ".jpg");
+            document.getElementById("ImageAuto").src = "images/large/" + image;
+            document.getElementById("divDescription").innerHTML = image;
+            document.getElementById("divDescription").style.textAlign = "center";
+        }
+
+        function hideImage(){
+            document.getElementById("ImageAuto").style.visibility="hidden"
+        }
+    </script>
+    </head>
+    <body>
+        <div id="DivWrapper">>
+        <main>
+            <table>
+            <header class=header>
+                <h1> JavaScript
+                    <br>
+                    Events - Click Events
+                </h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="default.html">Home</a></li>
+                    <li><a href="move.html">Move</a></li>
+                    <li class="selected"><a href="click.html">Click</a></li>
+                    <li><a href="drag.html">Drag</a></li>
+                </ul>
+            </nav>
+            <section> 
+                <article class=twoArticles>
+                    <header>Lucid Air Thumbnail</header>
+                        <img src ="images/small/lucid1.jpg" class="img50" onclick="showImage('lucid1.jpg')" >
+                        <img src ="images/small/lucid2.jpg" class="img50" onclick="showImage('lucid2.jpg')" >
+                        <br>
+                        <img src ="images/small/lucid3.jpg" class="img50" onclick="showImage('lucid3.jpg')">
+                        <img src ="images/small/lucid4.jpg" class="img50" onclick="showImage('lucid4.jpg')" >
+                </article> 
+                <article class="twoArticles">
+                    <header>Lucid Air Images</header>
+                        <img src="" id="ImageAuto" class="image100" />
+                    <div id="divDescription">
+
+                    </div>
+                </article>
+            </section>
+            <footer>
+                Zyad Khan
+            </footer>
+            </table>
+        </div>
+        </main>
+    </body>
+</html>
